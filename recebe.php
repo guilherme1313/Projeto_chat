@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $dados = isset($_POST['dados']) && !empty($_POST['dados']) ? $_POST['dados'] : null;
 
-    if(isset($dados) && !empty($dados)){
+    if(isset($dados['nome']) && !empty($dados['nome']) && isset($dados['mensagem']) && !empty($dados['mensagem'])){
         $nome = $dados['nome'];
         $_SESSION['nome_usuario'] = $nome;
         $mensagem = $dados['mensagem'];
@@ -29,7 +29,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             die($th);
         }
     }
-
+    header('Location: index.php');
+    die();
 
 }else{
     header('Location: index.php');

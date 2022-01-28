@@ -11,7 +11,7 @@ try {
     $test = $res->fetch_all(MYSQLI_ASSOC);
 
     foreach ($test as $key => $value){
-        echo "<img src='assets/imgs/Icon%20awesome-rocketchat.png'> <span style='color: red; font-size: 16px;'>".$value['nome']."</span> :";
+        echo "<img src='imgs/Icon%20awesome-rocketchat.png'> <span style='color: red; font-size: 16px;'>".$value['nome']."</span> :";
         echo " <p style='margin-left: 40px;'>".$value['mensagem']."</p>";
     }
     die();
