@@ -31,7 +31,7 @@ $_SESSION['nome_usuario'] = null;
 </head>
 <body onload="ajax();">
 <aside>
-    <img src="assets/imgs/Icon ionic-ios-chatboxes.png" alt="Chat" title="Chat"/>
+    <img src="imgs/Icon ionic-ios-chatboxes.png" alt="Chat" title="Chat"/>
 
     <form method="post" action="recebe.php">
         <input type="text" placeholder="Digite seu nome..." value="<?Php if(isset($usuario) && !empty($usuario)){ echo $usuario; } ?>" name="dados[nome]" id="name" />
